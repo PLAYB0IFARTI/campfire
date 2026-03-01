@@ -1,15 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://dukvr5ejbcslf"]
+[gd_scene load_steps=7 format=3 uid="uid://dukvr5ejbcslf"]
 
+[ext_resource type="PackedScene" uid="uid://bi20jpgivlr4b" path="res://scenes/tile_map.tscn" id="1_4nkto"]
 [ext_resource type="PackedScene" uid="uid://x2gqmtm3q7bx" path="res://scenes/stone.tscn" id="2_bswci"]
-[ext_resource type="PackedScene" uid="uid://vj3j10qehseq" path="res://scenes/character_body_2d.tscn" id="2_rus8k"]
+[ext_resource type="PackedScene" uid="uid://vj3j10qehseq" path="res://scenes/character.tscn" id="2_rus8k"]
+[ext_resource type="PackedScene" uid="uid://cagl6q75iq1th" path="res://scenes/wall.tscn" id="3_rus8k"]
+[ext_resource type="PackedScene" uid="uid://c6kgaqt13olqo" path="res://scenes/pit.tscn" id="4_5xbjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
+size = Vector2(125, 228)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(-17, -16)
+[node name="map" type="Node" parent="."]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_rus8k")]
+[node name="TileMap" parent="map" instance=ExtResource("1_4nkto")]
+position = Vector2(7.61451, 1.02153)
+layer_0/tile_data = PackedInt32Array(458764, 393217, 1, 524300, 393217, 1, 589836, 393217, 1, 589837, 393217, 1, 524301, 393217, 1, 458765, 393217, 1, 458766, 393217, 1, 524302, 393217, 1, 589838, 393217, 1)
+
+[node name="StaticBody2D" parent="map" instance=ExtResource("3_rus8k")]
+position = Vector2(113.995, 121.569)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/StaticBody2D"]
+position = Vector2(293.505, -12.569)
+shape = SubResource("RectangleShape2D_rus8k")
+
+[node name="Area2D" parent="map" instance=ExtResource("4_5xbjy")]
+position = Vector2(168, 192)
+
+[node name="objects" type="Node" parent="."]
+
+[node name="RigidBody2D3" parent="objects" instance=ExtResource("2_bswci")]
+position = Vector2(272, 75)
+
+[node name="RigidBody2D2" parent="objects" instance=ExtResource("2_bswci")]
+position = Vector2(268, 116)
+
+[node name="RigidBody2D" parent="objects" instance=ExtResource("2_bswci")]
+position = Vector2(185, 76)
+
+[node name="entities" type="Node" parent="."]
+
+[node name="CharacterBody2D" parent="entities" instance=ExtResource("2_rus8k")]
 position = Vector2(219, 132)
-
-[node name="RigidBody2D" parent="." instance=ExtResource("2_bswci")]
-position = Vector2(197, 88)
