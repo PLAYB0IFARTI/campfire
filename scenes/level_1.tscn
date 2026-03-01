@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dukvr5ejbcslf"]
+
+[ext_resource type="PackedScene" uid="uid://x2gqmtm3q7bx" path="res://scenes/stone.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://vj3j10qehseq" path="res://scenes/character_body_2d.tscn" id="2_rus8k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(-17, -16)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_rus8k")]
+position = Vector2(219, 132)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_bswci")]
+position = Vector2(197, 88)

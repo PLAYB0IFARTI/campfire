@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://x2gqmtm3q7bx"]
+
+[ext_resource type="Texture2D" uid="uid://1sykb8tslbu7" path="res://assets/sprites/download.jpg" id="1_hmdus"]
+[ext_resource type="Script" uid="uid://rkh3vmtw5uux" path="res://scripts/stone.gd" id="1_tuldt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f651v"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_tuldt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.103093, 0.0769231)
+texture = ExtResource("1_hmdus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f651v")
