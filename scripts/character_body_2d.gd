@@ -24,15 +24,15 @@ func try_pickup():
 			held_block = collider
 			held_block.get_node("CollisionShape2D").disabled = true
 			held_block.get_parent().remove_child(held_block)
-			add_child(held_block)  # attach to player
-			held_block.position = Vector2(0, -16)  # offset in front of player
+			add_child(held_block) 
+			held_block.position = Vector2(0, -16) 
 
 func drop_block():
 	if held_block:
 		held_block.get_node("CollisionShape2D").disabled = false
 		remove_child(held_block)
-		get_parent().add_child(held_block)  # put back in scene
-		held_block.global_position = global_position + cast.target_position  # drop in front
+		get_parent().add_child(held_block) 
+		held_block.global_position = global_position + cast.target_position  
 		held_block = null
 		
 func _physics_process(delta: float) -> void:
@@ -131,8 +131,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			drop_block()
 	if held_block:
-		# Keep the block in front of player (smoothly or fixed)
-		held_block.position = Vector2(0, -16)  # adjust offset as needed		
+		held_block.position = Vector2(0, -16)  	
 	move_and_slide()
 
 
