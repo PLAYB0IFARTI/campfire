@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bwt3svel3tehp" path="res://assets/map stuff/tilemap.jpeg" id="1_47enk"]
 [ext_resource type="Script" uid="uid://cpahpnjpbuoo3" path="res://scripts/tile_map.gd" id="1_tjuek"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jx7lj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47enk"]
 texture = ExtResource("1_47enk")
 0:0/0 = 0
 1:0/0 = 0
@@ -71,7 +71,7 @@ texture = ExtResource("1_47enk")
 7:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_dohrl"]
-sources/1 = SubResource("TileSetAtlasSource_jx7lj")
+sources/1 = SubResource("TileSetAtlasSource_47enk")
 
 [node name="TileMap" type="TileMap"]
 use_parent_material = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d36wyi6qjnkpg"
+path="res://.godot/imported/Fear & Hunger OST - Fear & Hunger - Fear & Hunger.mp3-2f5d55496eb79f68a5f00b33f6ee0c8f.mp3str"
+
+[deps]
+
+source_file="res://assets/Fear & Hunger OST - Fear & Hunger - Fear & Hunger.mp3"
+dest_files=["res://.godot/imported/Fear & Hunger OST - Fear & Hunger - Fear & Hunger.mp3-2f5d55496eb79f68a5f00b33f6ee0c8f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

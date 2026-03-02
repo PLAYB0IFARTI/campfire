@@ -5,8 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmdus"]
 
 [node name="RigidBody2D" type="RigidBody2D" groups=["breakable", "moveable"]]
+z_index = 2
 collision_layer = 20
-collision_mask = 21
+collision_mask = 53
 gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 4.0

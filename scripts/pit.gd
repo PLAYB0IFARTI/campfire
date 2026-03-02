@@ -2,14 +2,10 @@ extends StaticBody2D
 
 @onready var area: Area2D = $Area2D
 @onready var col: CollisionShape2D = $col
-@onready var areacol: CollisionShape2D = $Area2D/areacol
 
 # keep track of blocks inside
-var blocks_inside := []
-var original_layers := {}
 
 func _ready():
-	print("ob")
 	area.body_entered.connect(_on_body_entered)
 	area.body_exited.connect(_on_body_exited)
 
@@ -22,7 +18,7 @@ func _on_body_entered(body):
 		body.set_collision_layer_value(5, false)
 		body.set_collision_mask_value(1, false)
 		body.set_collision_mask_value(5, false)
-		print("ulg")
+		print("fdsfds")
 
 # When a block exits the Area2D
 func _on_body_exited(body):

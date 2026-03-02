@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://bstkoqiwdywva"]
+[gd_scene load_steps=2 format=3 uid="uid://bstkoqiwdywva"]
+
+[ext_resource type="Script" uid="uid://bisv0mli8s2vv" path="res://scripts/exitbox_2.gd" id="1_2732g"]
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_2732g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
