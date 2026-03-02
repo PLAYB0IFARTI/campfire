@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0035q2ktf151"]
+[gd_scene load_steps=22 format=3 uid="uid://b0035q2ktf151"]
 
 [ext_resource type="Script" uid="uid://dlsb0vsr4cy6" path="res://scripts/restart_2.gd" id="1_6cvei"]
 [ext_resource type="Texture2D" uid="uid://cbvx1fir4rpn5" path="res://assets/bgs/bg.jpeg" id="2_ne2mo"]
+[ext_resource type="AudioStream" uid="uid://d36wyi6qjnkpg" path="res://assets/theme.mp3" id="2_que50"]
 [ext_resource type="PackedScene" uid="uid://bi20jpgivlr4b" path="res://scenes/tile_map.tscn" id="3_6cvei"]
 [ext_resource type="Texture2D" uid="uid://bwt3svel3tehp" path="res://assets/map stuff/tilemap.jpeg" id="4_que50"]
 [ext_resource type="PackedScene" uid="uid://cagl6q75iq1th" path="res://scenes/wall.tscn" id="5_hey2k"]
@@ -109,6 +110,10 @@ size = Vector2(57, 29)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_6cvei")
+
+[node name="Theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_que50")
+parameters/looping = true
 
 [node name="map" type="Node" parent="."]
 

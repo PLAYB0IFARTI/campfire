@@ -1,14 +1,15 @@
-[gd_scene load_steps=20 format=3 uid="uid://b3xmspiahvr31"]
+[gd_scene load_steps=21 format=3 uid="uid://b3xmspiahvr31"]
 
 [ext_resource type="Script" uid="uid://b8aiqd5oc5k2u" path="res://scripts/restart_4.gd" id="1_x7blo"]
 [ext_resource type="Texture2D" uid="uid://cbvx1fir4rpn5" path="res://assets/bgs/bg.jpeg" id="2_qsmat"]
+[ext_resource type="AudioStream" uid="uid://d36wyi6qjnkpg" path="res://assets/theme.mp3" id="2_rr1tt"]
 [ext_resource type="PackedScene" uid="uid://bi20jpgivlr4b" path="res://scenes/tile_map.tscn" id="3_yk4f3"]
 [ext_resource type="Texture2D" uid="uid://bwt3svel3tehp" path="res://assets/map stuff/tilemap.jpeg" id="4_cp0rv"]
 [ext_resource type="PackedScene" uid="uid://cagl6q75iq1th" path="res://scenes/wall.tscn" id="5_rr1tt"]
 [ext_resource type="PackedScene" uid="uid://bstkoqiwdywva" path="res://scenes/exitbox.tscn" id="6_7ewpb"]
-[ext_resource type="Script" uid="uid://d2gjxlna7brqr" path="res://scripts/exitbox_1.gd" id="7_py6g0"]
 [ext_resource type="PackedScene" uid="uid://c6kgaqt13olqo" path="res://scenes/pit.tscn" id="8_cp0rv"]
 [ext_resource type="PackedScene" uid="uid://vj3j10qehseq" path="res://scenes/character.tscn" id="8_qsmat"]
+[ext_resource type="Script" uid="uid://ciskttu5hqdff" path="res://scripts/exitbox_5.gd" id="8_rr1tt"]
 [ext_resource type="PackedScene" uid="uid://x2gqmtm3q7bx" path="res://scenes/stone.tscn" id="9_rr1tt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g31h8"]
@@ -100,11 +101,15 @@ size = Vector2(210, 93)
 size = Vector2(138, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q41qf"]
-size = Vector2(36, 58)
+size = Vector2(65.00049, 58)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(3, 2)
 script = ExtResource("1_x7blo")
+
+[node name="Theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_rr1tt")
+parameters/looping = true
 
 [node name="map" type="Node" parent="."]
 
@@ -180,10 +185,10 @@ Have fun :P"
 position = Vector2(472.034, 343.268)
 collision_layer = 0
 collision_mask = 64
-script = ExtResource("7_py6g0")
+script = ExtResource("8_rr1tt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/Area2D"]
-position = Vector2(28.9665, -168.268)
+position = Vector2(14.466248, -168.268)
 shape = SubResource("RectangleShape2D_q41qf")
 debug_color = Color(0.764139, 0.343978, 0.739416, 0.42)
 
